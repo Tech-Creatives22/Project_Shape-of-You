@@ -1,0 +1,51 @@
+//Toggling the hamburger menu
+let navBar = document.querySelector('#navigation-bar');
+let menuBar = document.querySelector('#bar');
+
+menuBar.onclick = () => {
+    menuBar.classList.toggle('fa-solid.fa-bars');
+    navBar.classList.toggle('show');
+}
+
+//Slider
+var left = 1;
+var right = 6;
+
+function show() {
+    for (i = left; i <= right; i++)
+    {
+        document.getElementById("b-id" + i).style.display = "inline-block";
+    }
+}
+
+function moveLeft()
+{
+    if (left <= 3 && right <= 7) {
+        document.getElementById("b-id" + left).style.display = "none";
+        left += 1;
+        right += 1;
+
+        for (i = left; i <= right; i++) {
+            document.getElementById("b-id" + i).style.display = "inline-block";
+        }
+    }
+
+    else
+        return;
+}
+
+function moveRight()
+{
+    if (left >= 2 && right >= 6) {
+        document.getElementById("b-id" + right).style.display = "none";
+        left -= 1;
+        right -= 1;
+
+        for (i = left; i <= right; i++) {
+            document.getElementById("b-id" + i).style.display = "inline-block";
+        }
+    }
+
+    else
+        return;
+}
