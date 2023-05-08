@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shape of you - ladies beauty salon</title>
+    <link rel="stylesheet" type="text/css" href="home_style.css" />
+    <link rel="icon" href="images/SOY favicon.png" type="image/x-icon" /> <!--gonna change the icon later-->
+    <!--External stylesheets-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a049c3ac9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="show()">
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <img class="logo_img" src="images/SOY icon.png" alt="icon image" />
+            <a href="home.html" class="logo_text"><i>Shape of You <br /><span id="logo_text2">ladies Beauty</span></i></a>
+        </div>
+
+        <ul id="navigation-bar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+
+        <!--menu bar-->
+        <i class="fa-solid fa-bars" id="bar"></i>
+    </header>
+
+    <!--Image-->
+    <div class="cosmetics">
+        <p id="cosmetics-text">Behind every beautiful women is a fabulous hairstylist....<br /><br />Visit us today</p>
+        <button class="book" type="button">Book Your appointment <i class="fa-solid fa-arrow-right fa-beat" id="arrow"></i></button>
+    </div>
+
+    <!--Texts-->
+    <div class="hr-section">Welcome to Shape of You Ladies Beauty</div>
+    <article class="texts">
+        jka hckaheu nciaeu hfa nica eh cia nciae nb nciaehfncai nciaehfaojfo nciaehfaio nciaehihfa jclam fa moca
+        ncaoieifh an ncia enn cia hdi nciaenca ncia dhhijfe ncka fhiuehf  v aiefn hnca ncoaehio v
+        ncai fncaiehfbjak nic aebifhvlmjoidkcm kjfaoien mfroja mo rjioejn raojnfj ei foeanioaehr nofejijg
+        ncoenlkankgjenefk jfoehklnldfjoer jgorejoe jvoersrjls iorm sj gporikps kprgms or kgspr rj g rjosmgr<br /><br />
+
+        jka hckaheu nciaeu hfa nica eh cia nciae nb nciaehfncai nciaehfaojfo nciaehfaio nciaehihfa jclam fa moca
+        ncaoieifh an ncia enn cia hdi nciaenca ncia dhhijfe ncka fhiuehf  v aiefn hnca ncoaehio v
+    </article>
+
+    <!--Services-->
+    <div class="hr-section">Services</div>
+
+    <div class="gallery-container">
+        <div class="images-box">
+            <img src="images/nails.png" class="service-img" alt="nails image" />
+            <div class="overlay">
+                <p class="hover-text">Manicure</p>
+            </div>
+        </div>
+
+        <div class="images-box">
+            <img src="images/hair.png" class="service-img" alt="hair image" />
+            <div class="overlay">
+                <p class="hover-text">Hair style</p>
+            </div>
+        </div>
+
+        <div class="images-box">
+            <img src="images/henna.jpg" class="service-img" alt="henna image" />
+            <div class="overlay">
+                <p class="hover-text">Henna</p>
+            </div>
+        </div>
+
+        <div class="images-box">
+            <img src="images/facial.png" class="service-img" alt="facial image" />
+            <div class="overlay">
+                <p class="hover-text">Facial</p>
+            </div>
+        </div>
+
+        <div class="images-box">
+            <img src="images/lashes.jpg" class="service-img" alt="lashes image" />
+            <div class="overlay">
+                <p class="hover-text">Eye-lashes</p>
+            </div>
+        </div>
+
+        <div class="images-box">
+            <img src="images/makeup.jpg" class="service-img" alt="makeup image" />
+            <div class="overlay">
+                <p class="hover-text">Makeup</p>
+            </div>
+        </div>
+
+        <div class="images-box">
+            <img src="images/massage.png" class="service-img" alt="massage image" />
+            <div class="overlay">
+                <p class="hover-text">Massage</p>
+            </div>
+        </div>
+
+        <div class="images-box">
+            <img src="images/waxing.jpg" class="service-img" alt="waxing image" />
+            <div class="overlay">
+                <p class="hover-text">Waxing</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Brands-->
+    <div class="hr-section">Brands</div>
+
+    <div class="brands-container">
+
+        <!--Slider arrow - left-->
+        <div id="left-arrow" onclick="moveLeft()">
+            <button type="button"><i class="fa-solid fa-caret-left"></i></button>
+        </div>
+
+        <!--Brand images-->
+        <div class="brands" id="b-id1">
+            <img src="images/Dior.jpg" alt="Brand 1 - Dior" />
+        </div>
+        <div class="brands" id="b-id2">
+            <img src="images/Mac.jpg" alt="Brand 2 - Mac" />
+        </div>
+        <div class="brands" id="b-id3">
+            <img src="images/Loreal.png" alt="Brand 3 - Loreal" />
+        </div>
+        <div class="brands" id="b-id4">
+            <img src="images/Garnier.jpg" alt="Brand 4 - Garnier" />
+        </div>
+        <div class="brands" id="b-id5">
+            <img src="images/Sephora.jpg" alt="Brand 5 - Sephora" />
+        </div>
+        <div class="brands" id="b-id6">
+            <img src="images/Nars.jpg" alt="Brand 6 - Nars" />
+        </div>
+        <div class="brands" id="b-id7">
+            <img src="images/Maybelline.png" alt="Brand 7 - Maybelline" />
+        </div>
+        <div class="brands" id="b-id8">
+            <img src="images/Chanel.jpg" alt="Brand 8 - Chanel" />
+        </div>
+
+        <!--Slider arrow - right-->
+        <div id="right-arrow" onclick="moveRight()">
+            <button type="button"><i class="fa-solid fa-caret-right"></i></button>
+        </div>
+    </div>
+
+    <!--Javascript link-->
+    <script type="text/javascript" src="home_java.js"></script>
+</body>
+</html>
