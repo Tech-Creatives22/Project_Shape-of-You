@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('images/Website background.png');
+}
+
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 8px;
+    background-color: #eff5f4;
+    color: #307D7A;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    transition: all .4s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+}
+
+.logo_img{
+    width: 85px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1.2px solid red;
+}
+
+.logo_text {
+    color: #000000;
+    font-family: 'IM Fell French Canon', serif;
+    font-size: 25px;
+}
+
+#logo_text2{
+    font-size: 18px;
+}
+
+#navigation-bar {
+    display: flex;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    list-style: none;
+    align-items: center;
+    margin-right: 22px;
+}
+
+ul li {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+ul li a{
+    color: #307D7A;
+    padding: 12px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+ul li a:hover{
+    background-color: #307D7A;
+    color: #fff;
+}
+
+#bar{
+    display: none;
+    z-index: 20;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+/*Image*/
+.cosmetics {
+    background-image: linear-gradient(180deg, rgba(48, 125, 122, .56), rgba(255, 255, 255, .50)), url('images/cosmetics.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 720px;
+}
+
+#cosmetics-text{
+    color: #307D7A;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 28px;
+    padding-top: 269px;
+    margin-left: 62.2%;
+}
+
+.book{
+    width: 290px;
+    padding: 10px;
+    border: 0;
+    border-radius: 12px;
+    outline: none;
+    background-color: #307D7A;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 62.2%;
+    margin-top: 26px;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 22px;
+    transition: all .4s ease;
+}
+
+#arrow{
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+.book:hover{
+    background: rgba(48, 125, 122, .60);
+}
+
+/*Hr section*/
+.hr-section{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    font-size: 1.3rem;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    color: #000000;
+    margin: 45px 100px;
+}
+
+.hr-section:before,
+.hr-section:after{
+    content: "";
+    flex-grow: 1;
+    background: rgba(48, 125, 122, .56);
+    height: 2.4px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 8px;
+}
+
+/*paragraph*/
+.texts {
+    font-size: 1.3rem;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.58);
+    margin: 0 10%;
+}
+
+/*Services section*/
+.gallery-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-img {
+    object-fit: cover;
+    width: 253px;
+    height: 256px;
+    border: 2px solid #307D7A;
+    border-radius: 28px;
+}
+
+.images-box {
+    position: relative;
+    width: 253px;
+    height: 256px;
+    margin: 30px 30px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(48, 125, 122, .55);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    border-radius: 28px;
+    transition: .5s ease;
+}
+
+.images-box:hover .overlay {
+    height: 100%;
+}
+
+.hover-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*Brands*/
+.brands-container{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.brands{
+    background-color: transparent;
+    width: 12%;
+    margin: 0 10px;
+    display: none;
+}
+
+.brands > img{
+    height: 164px;
+    width: 164px;
+    border-radius: 100px;
+    border: 2px solid #307D7A;
+}
+
+#left-arrow,
+#right-arrow{
+    margin-left: 12px;
+    width: 3%;
+    display: inline-block;
+}
+
+#left-arrow button,
+#right-arrow button{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    color: #307D7A;
+    border-radius: 3px;
+    border: 1px solid #307D7A;
+}
+/*Scroll-bar*/
+::-webkit-scrollbar {
+    width: 10%;
+}
+
+/*<600px, 601px, 768px, 992px, 1200px*/
+@media only screen and (max-width: 1200px){
+    header{
+        padding: 14px 0;
+        transition: .2s;
+    }
+
+    ul li a{
+        font-size: 18px;
+    }
+
+    .logo_img {
+        width: 75px;
+        height: 70px;
+        margin-right: 14px;
+    }
+
+    .logo_text {
+        font-size: 18px;
+    }
+
+    #logo_text2 {
+        font-size: 14.5px;
+    }
+}
+
+@media only screen and (max-width: 940px){
+    #bar{
+        display: block;
+    }
+
+    #navigation-bar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 280px;
+        height: 50vh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: all .4s ease;
+        background-color: #307D7A;
+    }
+
+    ul li a{
+        color: white;
+        display: block;
+        margin: 8px 0;
+        padding: 10px 20px;
+        transition: all .4s ease;
+    }
+
+    ul li a:hover{
+        background-color: transparent;
+        color: #ffffff;
+        transform: translateX(3.4px);
+    }
+
+    #navigation-bar.show{
+        right: 2%;
+    }
+}
