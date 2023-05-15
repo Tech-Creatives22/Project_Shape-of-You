@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Inter&family=Montserrat:wght@200&display=swap');
 
 *{
     margin: 0;
@@ -9,6 +9,7 @@
 
 body {
     min-height: 100vh;
+    /*min-width: fit-content;*/
     background-image: url('images/Website background.png');
 }
 
@@ -22,7 +23,7 @@ header {
     color: #307D7A;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     transition: all .4s ease;
 }
@@ -126,6 +127,7 @@ ul li a:hover{
 
 .book:hover{
     background: rgba(48, 125, 122, .60);
+    transform: translateX(8px);
 }
 
 /*Hr section*/
@@ -161,7 +163,7 @@ ul li a:hover{
 }
 
 /*Services section*/
-.gallery-container {
+.service-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -214,6 +216,7 @@ ul li a:hover{
     text-align: center;
 }
 
+/*-------------------------------------------------------------*/
 /*Brands*/
 .brands-container{
     background-color: transparent;
@@ -244,15 +247,189 @@ ul li a:hover{
     display: inline-block;
 }
 
-#left-arrow button,
-#right-arrow button{
-    cursor: pointer;
-    font-size: 20px;
-    padding: 5px 10px;
-    color: #307D7A;
-    border-radius: 3px;
-    border: 1px solid #307D7A;
+    #left-arrow button,
+    #right-arrow button {
+        display: inline-block;/*extra added*/
+        cursor: pointer;
+        font-size: 20px;
+        padding: 5px 10px;
+        color: #307D7A;
+        border-radius: 3px;
+        border: 1px solid #307D7A;
+    }
+
+/*-------------------------------------------------------------*/
+/*Gallery*/
+.gallery-container {
+    padding: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: transparent;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
 }
+
+.vertical{
+    grid-row: span 2;
+}
+
+.horizontal{
+    grid-column: span 2;
+}
+
+.gallery-container > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Gallery Button*/
+form > .more{
+    width: 140px;
+    padding: 8px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    background-color: #307D7A;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 20px 0 30px 76%;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 18px;
+    transition: all .4s ease;
+}
+
+form > .more:hover{
+    background: rgba(48, 125, 122, .60);
+    transform: translateX(8px);
+}
+
+/*Footer*/
+.footer-container{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 250px;
+    color: #e0e0e0;
+}
+
+.footer-container > div{
+    margin-left: 8%;
+    margin-right: 9%;
+}
+
+/*Footer - 1st div*/
+.social-media{
+    text-align: center;
+}
+
+.social-media > i{
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 6px;
+    margin-top: 10px;
+    margin-right: 13px;
+}
+
+.social-media > h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.50);
+    margin-bottom: 8px;
+}
+
+.social-media > p {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
+
+/*Footer - 2nd div*/
+.working-hours{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.working-hours > h2{
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.working-hours > p{
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.mail{
+    margin-left: 20px;
+}
+
+form > .call, .mail{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    padding: 6px 30px;
+    cursor: pointer;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 15px;
+    transition: all .4s ease;
+}
+
+.call:hover, .mail:hover{
+    transform: translateX(5px);
+}
+
+.info-button {
+    display: flex;
+    margin-top: 21px;
+}
+
+/*Footer - 3rd div*/
+.location{
+    text-align: center;
+}
+
+.location > a > i{
+    color: #fff;
+    font-size: 50px;
+}
+
+.location > p{
+    font-family: 'Inter', sans-serif;
+    line-height: 25px;
+}
+
+/*Copyright text*/
+.cr-hr {
+    margin: auto;
+    width: 85%;
+    text-align: center;
+    background-color: #e0e0e0;
+    height: 2px;
+}
+
+.copyright{
+    background-color: #6f6e6e;
+    color: #e0e0e0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
 /*Scroll-bar*/
 ::-webkit-scrollbar {
     width: 10%;
@@ -282,19 +459,47 @@ ul li a:hover{
     #logo_text2 {
         font-size: 14.5px;
     }
+    .brands-container {
+        height: 120px;
+        min-width: contain;
+        justify-content: center;
+    }
+
+    .brands {
+        width: 15%;
+        margin: 0 0.1px 0 0.1px;
+        padding-left: 0.01em;
+    }
+
+        .brands > img {
+            margin-left: 10px;
+            height: 110px;
+            width: 110px;
+            padding: 2px 2px 2px 2px;
+            border-radius: 100px;
+        }
+
+    #left-arrow,
+    #right-arrow {
+        width: 5%;
+        display: inline-block;
+    }
+
 }
 
-@media only screen and (max-width: 940px){
-    #bar{
+/*Media query for mobile*/
+@media only screen and (max-width: 600px) {
+    /*header*/
+    #bar {
         display: block;
     }
 
-    #navigation-bar{
+    #navigation-bar {
         position: absolute;
         top: 100%;
-        right: -100%;
+        right: -150%;
         width: 280px;
-        height: 50vh;
+        height: fit-content;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -303,7 +508,7 @@ ul li a:hover{
         background-color: #307D7A;
     }
 
-    ul li a{
+    ul li a {
         color: white;
         display: block;
         margin: 8px 0;
@@ -311,13 +516,130 @@ ul li a:hover{
         transition: all .4s ease;
     }
 
-    ul li a:hover{
-        background-color: transparent;
-        color: #ffffff;
-        transform: translateX(3.4px);
+        ul li a:hover {
+            background-color: transparent;
+            color: #ffffff;
+            transform: translateX(3.4px);
+        }
+
+    #navigation-bar.show {
+        right: 2%;
     }
 
-    #navigation-bar.show{
-        right: 2%;
+    /*gallery*/
+    .vertical {
+        grid-row: span 1;
+    }
+
+    .horizontal {
+        grid-column: span 1;
+    }
+
+    /*Cosmetics*/
+    .cosmetics {
+        background-image: linear-gradient(180deg, rgba(48, 125, 122, .56), rgba(255, 255, 255, .50)), url('images/cosmetics.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 239px;
+    }
+
+    #cosmetics-text {
+        font-size: 19px;
+        margin-left: 2%;
+        text-align: center;
+        margin-top: -80px;
+    }
+
+    .book {
+        width: 200px;
+        padding: 5px;
+        margin-left: 28%;
+        border-radius: 10px;
+        margin-top: 17px;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+
+    #arrow {
+        padding-left: 5px;
+        font-size: 14px;
+    }
+
+    /*hr-section*/
+    .hr-section {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        font-size: 13px;
+        margin: 15px 40px;
+    }
+
+        .hr-section:before,
+        .hr-section:after {
+            content: "";
+            flex-grow: 1;
+            background: rgba(48, 125, 122, .56);
+            height: 2.4px;
+            font-size: 0;
+            line-height: 0;
+            margin: 0 6px;
+        }
+
+    /*paragraph*/
+    .texts {
+        font-size: 15px;
+        margin: 0 10%;
+    }
+
+    /*services*/
+    .service-img {
+        object-fit: cover;
+        width: 130px;
+        height: 80px;
+        border: 2px solid #307D7A;
+        border-radius: 13px;
+    }
+
+    .images-box {
+        position: relative;
+        width: 130px;
+        height: 80px;
+        margin: 8px 8px;
+    }
+
+    .overlay {
+        border-radius: 13px;
+    }
+
+    .hover-text {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .brands-container {
+        height: 120px;
+        min-width:contain;
+        justify-content:center;
+    }
+
+    .brands {
+        width: 15%;
+        margin: 0 0.1px 0 0.1px;
+        padding-left: 0.01em;
+    }
+
+        .brands > img {
+            margin-left:10px;
+            height: 80px;
+            width: 80px;
+            padding: 2px 2px 2px 2px;
+            border-radius: 100px;
+        }
+
+    #left-arrow,
+    #right-arrow {
+        width: 5%;
+        display: inline-block;
     }
 }
