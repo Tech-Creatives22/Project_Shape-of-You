@@ -7,10 +7,9 @@
     <title>Shape of you - ladies beauty salon</title>
     <link rel="stylesheet" type="text/css" href="home_style.css" />
     <link rel="icon" href="images/SOY favicon.png" type="image/x-icon" /> <!--gonna change the icon later-->
+
     <!--External stylesheets-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a049c3ac9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -57,7 +56,7 @@
     <!--Services-->
     <div class="hr-section">Services</div>
 
-    <div class="gallery-container">
+    <div class="service-container">
         <div class="images-box">
             <img src="images/nails.png" class="service-img" alt="nails image" />
             <div class="overlay">
@@ -156,6 +155,82 @@
             <button type="button"><i class="fa-solid fa-caret-right"></i></button>
         </div>
     </div>
+
+    <!--Gallery-->
+    <div class="hr-section">Gallery</div>
+
+    <div class="gallery-container">
+        <div class="horizontal">
+            <img src="images/waxing.jpg" alt="waxing image" />
+        </div>
+        <div class="horizontal">
+            <img src="images/nails.png" alt="manicure" />
+        </div>
+        <div>
+            <img src="images/massage.png" alt="massage" />
+        </div>
+        <div class="vertical">
+            <img src="images/makeup.jpg" alt="makeup" />
+        </div>
+        <div class="horizontal">
+            <img src="images/lashes.jpg" alt="eye lashes" />
+        </div>
+        <div>
+            <img src="images/henna.jpg" alt="henna" />
+        </div>
+        <div>
+            <img src="images/hair.png" alt="hair-style" />
+        </div>
+        <div>
+            <img src="images/facial.png" alt="facial" />
+        </div>
+    </div>
+
+    <!--Button redirect to the gallery page-->
+    <form action="#">
+        <input class="more" type="submit" value="View more" />
+    </form>
+
+    <!--Footer-->
+    <footer style="background-color: #6f6e6e;">
+        <div class="footer-container">
+            <div class="social-media">
+                <h2>Shape of you</h2>
+                <p>Find us on our social media platforms</p>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="working-hours">
+                <h2>Working Hours</h2> <br />
+                <p>Working days / 08:00 - 20:00</p>
+                <p>Saturday / 08:00 - 20:00</p>
+                <p>Sunday / CLOSED</p>
+
+                <!--Buttons-->
+                <div class="info-button">
+                    <form action="#">
+                        <input class="call" type="submit" value="Call Us" />
+                    </form>
+
+                    <form action="#">
+                        <input class="mail" type="submit" value="Email Us" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="location">
+                <a href="#"><i class="fa-solid fa-location-dot"></i></a> <br /><br />
+                <p>Al Dhait, Ras Al Khaimah</p>
+                <p>United Arab Emirates</p>
+            </div>
+        </div>
+        <hr class="cr-hr" />
+        <p style="padding:20px 0" class="copyright">Copyright <i class="fa-regular fa-copyright"></i> 2023</p>
+
+    </footer>
 
     <!--Javascript link-->
     <script type="text/javascript" src="home_java.js"></script>
