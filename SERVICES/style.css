@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Inter&family=Montserrat:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(180deg, rgba(48, 125, 122, .56), rgba(255, 255, 255, .50), rgba(255, 255, 255, .50), rgba(255, 255, 255, .50), rgba(255, 255, 255, .50), rgba(255, 255, 255, .50)), url('bg.png');
+}
+
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 8px;
+    background-color: #eff5f4;
+    color: #307D7A;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    transition: all .4s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+}
+
+.logo_img {
+    width: 85px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1.2px solid red;
+}
+
+.logo_text {
+    color: #000000;
+    font-family: 'IM Fell French Canon', serif;
+    font-size: 25px;
+}
+
+#logo_text2 {
+    font-size: 18px;
+}
+
+#navigation-bar {
+    display: flex;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    list-style: none;
+    align-items: center;
+    margin-right: 22px;
+}
+
+ul li {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+    ul li a {
+        color: #307D7A;
+        padding: 12px;
+        border-radius: 5px;
+        transition: all 0.5s;
+    }
+
+        ul li a:hover {
+            background-color: #307D7A;
+            color: #fff;
+        }
+
+#bar {
+    display: none;
+    z-index: 20;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+.main {
+    padding-top: 140px;
+    color: #307D7A;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    align-items: center;
+    margin:auto;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:28px;
+}
+.services-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.image-box {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    margin: 30px 30px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+    .image-box:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+.img {
+    object-fit: fill;
+    width: 250px;
+    height: 180px;
+    border: 2px solid #307D7A;
+    border-radius: 29px;
+}
+/*Hr section*/
+.hr-section {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    font-size: 1.3rem;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    color: #000000;
+    margin: 45px 100px;
+}
+
+    .hr-section:before,
+    .hr-section:after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(48, 125, 122, .56);
+        height: 2.4px;
+        font-size: 0;
+        line-height: 0;
+        margin: 0 8px;
+    }
+h3 {
+    color:#307D7A;
+}
+.section {
+    padding: 10px 0 10px 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Add a class to the sections that need the slide-in effect */
+.slide-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+    /* Apply the slide-in animation when the section is visible */
+    .slide-in.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.pic-box {
+    position: relative;
+    width: 400px;
+    height: 280px;
+    margin: 10px 30px;
+}
+
+.pic {
+    object-fit: fill;
+    width: 400px;
+    height: 280px;
+}
+.info {
+    padding: 2px 5px 2px 10px;
+    inline-size: 55%;
+    text-align:justify;
+    overflow-wrap: break-word;
+}
+/*button*/
+.btn-r {
+    width: auto;
+    padding: 8px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    background-color: #307D7A;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 20px 0 30px 80%;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 18px;
+    transition: all .4s ease;
+}
+.btn-l {
+    width: auto;
+    padding: 8px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    background-color: #307D7A;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 20px 80% 30px 0;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 18px;
+    transition: all .4s ease;
+}
+
+.btn-r:hover {
+    border: 5px solid rgba(48, 125, 122, .60);
+    cursor: pointer;
+    transform: scale(1.25);
+    background: rgba(48, 125, 122, .60);
+    /*    transform: translateX(8px);*/
+}
+.btn-l:hover {
+    border: 5px solid rgba(48, 125, 122, .60);
+    cursor: pointer;
+    transform: scale(1.25);
+    background: rgba(48, 125, 122, .60);
+    /*    transform: translateX(8px);*/
+}
+/*Footer*/
+.footer-container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 250px;
+    color: #e0e0e0;
+}
+
+    .footer-container > div {
+        margin-left: 8%;
+        margin-right: 9%;
+    }
+
+/*Footer - 1st div*/
+.social-media {
+    text-align: center;
+}
+
+    .social-media > i {
+        cursor: pointer;
+        border: 1px solid #e0e0e0;
+        border-radius: 50px;
+        padding: 6px;
+        margin-top: 10px;
+        margin-right: 13px;
+    }
+
+    .social-media > h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-style: italic;
+        font-size: 35px;
+        text-transform: uppercase;
+        text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.50);
+        margin-bottom: 8px;
+    }
+
+    .social-media > p {
+        font-family: 'Inter', sans-serif;
+        font-style: italic;
+    }
+
+/*Footer - 2nd div*/
+.working-hours {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+    .working-hours > h2 {
+        font-size: 22px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+
+    .working-hours > p {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+
+.mail {
+    margin-left: 20px;
+}
+
+form > .call, .mail {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    padding: 6px 30px;
+    cursor: pointer;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 15px;
+    transition: all .4s ease;
+}
+
+    .call:hover, .mail:hover {
+        transform: translateX(5px);
+    }
+
+.info-button {
+    display: flex;
+    margin-top: 21px;
+}
+
+/*Footer - 3rd div*/
+.location {
+    text-align: center;
+}
+
+    .location > a > i {
+        color: #fff;
+        font-size: 50px;
+    }
+
+    .location > p {
+        font-family: 'Inter', sans-serif;
+        line-height: 25px;
+    }
+
+/*Copyright text*/
+.cr-hr {
+    margin: auto;
+    width: 85%;
+    text-align: center;
+    background-color: #e0e0e0;
+    height: 2px;
+}
+
+.copyright {
+    background-color: #6f6e6e;
+    color: #e0e0e0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+/*Scroll-bar*/
+/*::-webkit-scrollbar {
+    width: 10%;
+}*/
+@media only screen and (max-width: 1200px) {
+    #bar {
+        display: block;
+    }
+
+    #navigation-bar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 280px;
+        height: 60vh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: all .4s ease;
+        background-color: #307D7A;
+    }
+
+    ul li a {
+        color: white;
+        display: block;
+        margin: 8px 0;
+        padding: 10px 20px;
+        transition: all .4s ease;
+    }
+
+        ul li a:hover {
+            background-color: transparent;
+            color: #ffffff;
+            transform: translateX(3.4px);
+        }
+
+    #navigation-bar.show {
+        right: 2%;
+    }
+    .btn-r {
+        margin:20px 0 20px 125px;/*t-r-b-l*/
+    }
+    .btn-l {
+        margin: 20px 0 20px 125px; /*t-r-b-l*/
+    }
+/*   .btn-r {
+        margin-left: 40%;
+        margin-right:60%;
+    }
+
+    .btn-l {
+        margin-left: 40%;
+        margin-right: 60%;
+    }*/
+    .slide-in {
+        opacity: 1;
+        transform: none;
+    }
+    .pic-box {
+        position: relative;
+        width: 320px;
+        height: 200px;
+        margin: 10px 30px;
+    }
+
+    .pic {
+        object-fit: fill;
+        width: 320px;
+        height: 200px;
+    }
+    .footer-container{
+        height:auto;
+        display:flex;
+        flex-direction:column;
+    }
+    .social-media{
+        padding:15px;
+    }
+    .working-hours {
+        padding: 15px;
+        text-align:center;
+    }
+}
+/*Media query for mobile*/
+@media only screen and (max-width: 600px) {
+    /*header*/
+    #bar {
+        display: block;
+    }
+
+    #navigation-bar {
+        position: absolute;
+        top: 100%;
+        right: -150%;
+        width: 280px;
+        height: fit-content;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: all .4s ease;
+        background-color: #307D7A;
+    }
+
+    ul li a {
+        color: white;
+        display: block;
+        margin: 8px 0;
+        padding: 10px 20px;
+        transition: all .4s ease;
+    }
+
+        ul li a:hover {
+            background-color: transparent;
+            color: #ffffff;
+            transform: translateX(3.4px);
+        }
+
+    #navigation-bar.show {
+        right: 2%;
+    }
+
+    .footer-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media {
+        padding: 15px;
+    }
+
+    .working-hours {
+        padding: 15px;
+        text-align: center;
+    }
+    .info {
+        text-align:justify;
+        inline-size: 80%;
+    }
+}
+
