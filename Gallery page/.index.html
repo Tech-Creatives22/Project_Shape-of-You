@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://kit.fontawesome.com/52fc684109.js" crossorigin="anonymous"></script>
+    <title>Gallery</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <div class="logo">
+            <img class="logo_img" src="images/SOY icon.png" alt="icon image" />
+            <a href="home.html" class="logo_text"><i>Shape of You <br /><span id="logo_text2">ladies Beauty</span></i></a>
+        </div>
+
+        <ul id="navigation-bar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+
+        <!--menu bar-->
+        <i class="fa-solid fa-bars" id="bar"></i>
+    </header><br /><br /><br />
+    <h1>Gallery</h1>
+
+
+    <!--main image slider container-->
+    <div class="container">
+        <img class="images" src="images/card 2.jpg">
+        <img class="images" src="images/img2.jpg">
+        <img class="images" src="images/img3.jpg">
+        <img class="images" src="images/img1.jpg">
+        <img class="images" src="images/card 4.jpg">
+        <img class="images" src="images/img1.jpg">
+
+        <!--image slider indicators-->
+        <div class="btn">
+            <span onclick="btn_img(1)"></span>
+            <span onclick="btn_img(2)"></span>
+            <span onclick="btn_img(3)"></span>
+            <span onclick="btn_img(4)"></span>
+            <span onclick="btn_img(5)"></span>
+            <span onclick="btn_img(6)"></span>
+        </div>
+    </div>
+
+
+    <!--next and previous button to manually look at the photos-->
+    <div class="image next" onclick="next_image(-1)">
+        <span class="fa-sharp fa-solid fa-play" style="color: gray"></span>
+    </div>
+    <div class="image previous" onclick="next_image(1)">
+        <span class="fa-sharp fa-solid fa-play fa-rotate-180" style="color: gray"></span>
+    </div>
+    <br /><br />
+
+
+    <!--container for image cards-->
+    <div class="bottom-container">
+
+        <div class="card">
+            <p id="service"><a href="#nails">Nails</a></p>
+            <img id="card1" src="images/card 1.png" alt="nails" style="width: 100%" />
+        </div>
+
+        <div class="card">
+            <p id="service"><a href="#hairs">Hair</a></p>
+            <img id="card2" src="images/card 2.jpg" alt="hair" style="width: 100%" />
+        </div>
+
+        <div class="card">
+            <p id="service"><a href="#henna">Henna</a></p>
+            <img id="card3" src="images/card 3.jpg" alt="henna" style="width: 100%" />
+        </div>
+
+        <div class="card">
+            <p id="service"><a href="#facial">Facial</a></p>
+            <img id="card4" src="images/card 4.jpg" alt="facial" style="width: 100%" />
+        </div>
+    </div>
+    <br />
+
+    <div id="hr-section1" /><p id="nails">Nails</p>
+    <br />
+
+    <!--nails gallery section-->
+    <div class="gallery">
+        <div style="width: 80%;">
+            <div class="image-gallery1">
+                <div class="gallery-container">
+                    <img id="image1" src="images/nails/nail1.jpg" alt="nail1" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image2" src="images/nails/nail2.jpg" alt="nail2" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image5" src="images/nails/nail5.jpg" alt="nail5" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image6" src="images/nails/nail6.jpg" alt="nail6" />
+                </div>
+            </div>
+
+            <div class="image-gallery1">
+                <div class="gallery-container">
+                    <img id="image3" src="images/nails/nail3.jpg" alt="nail3" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image4" src="images/card 1.png" alt="nail4" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image7" src="images/nails/nail2.jpg" alt="nail7" />
+                </div>
+
+                <div class="gallery-container">
+                    <img id="image8" src="images/nails/nail7.jpg" alt="nail8" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+
+    <div id="hr-section1" /><p id="hairs">Hairs</p>
+    <br /><br />
+
+    <!--hair gallery section-->
+    <div class="gallery">
+        <div style="width: 80%;">
+            <div class="image-gallery1">
+                <div class="gallery-container">
+                    <img id="image1" src="images/hairstyles/hair1.png" alt="hairstyle1" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image2" src="images/hairstyles/hair2.jpg" alt="hairstyle2" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image5" src="images/hairstyles/hair5.png" alt="hairstyle5" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image6" src="images/hairstyles/hair6.png" alt="hairstyle6" />
+                </div>
+            </div>
+
+            <div class="image-gallery1">
+                <div class="gallery-container">
+                    <img id="image3" src="images/hairstyles/hair3.png" alt="hairstyle3" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image4" src="images/hairstyles/hair4.png" alt="hairstyle4" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image7" src="images/hairstyles/hair7.png" alt="hairstyle7" />
+                </div>
+
+                <div class="gallery-container">
+                    <img id="image8" src="images/hairstyles/hair8.png" alt="hairstyle8" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+
+
+    <div id="hr-section1" /><p id="henna">Henna</p>
+    <br /><br />
+    <!--henna gallery section-->
+    <div class="gallery">
+        <div style="width: 80%;">
+            <div class="image-gallery1">
+                <div class="gallery-container">
+                    <img id="image1" src="images/henna/henna1.png" alt="henna1" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image2" src="images/henna/henna2.png" alt="henna2" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image5" src="images/henna/henna5.jpg" alt="henna5" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image6" src="images/henna/henna6.png" alt="henna6" />
+                </div>
+            </div>
+
+            <div class="image-gallery1">
+                <div class="gallery-container">
+                    <img id="image3" src="images/henna/henna3.png" alt="henna3" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image4" src="images/henna/henna4.png" alt="henna4" />
+                </div>
+                <div class="gallery-container">
+                    <img id="image7" src="images/henna/henna7.png" alt="henna7" />
+                </div>
+
+                <div class="gallery-container">
+                    <img id="image8" src="images/henna/henna8.png" alt="henna8" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+
+
+    <div id="hr-section1" /><p id="facial">Facial</p>
+    <br /><br />
+    <!--facial gallery section-->
+          <div class="gallery">
+              <div style="width: 80%;">
+                  <div class="image-gallery1">
+                      <div class="gallery-container">
+                          <img id="image1" src="images/facial/facial1.jpg" alt="facial1" />
+                      </div>
+                      <div class="gallery-container">
+                          <img id="image2" src="images/facial/facial2.jpg" alt="facial2" />
+                      </div>
+                      <div class="gallery-container">
+                          <img id="image5" src="images/facial/facial5.png" alt="facial5" />
+                      </div>
+                      <div class="gallery-container">
+                          <img id="image6" src="images/facial/facial6.jpg" alt="facial6" />
+                      </div>
+                  </div>
+
+                  <div class="image-gallery1">
+                      <div class="gallery-container">
+                          <img id="image3" src="images/facial/facial3.jpg" alt="facial3" />
+                      </div>
+                      <div class="gallery-container">
+                          <img id="image4" src="images/facial/facial4.png" alt="facial4" />
+                      </div>
+                      <div class="gallery-container">
+                          <img id="image7" src="images/facial/facial7.png" alt="facial7" />
+                      </div>
+
+                      <div class="gallery-container">
+                          <img id="image8" src="images/facial/facial2.jpg" alt="facial2" />
+                      </div>
+                  </div>
+              </div>
+              <div class="popup-img">
+                  <span>&times;</span>
+                  <img id="image8" src="images/facial/facial2.jpg" alt="facial2" />
+              </div>
+          </div>
+    <br /><br />
+
+
+    <!--Footer-->
+    <footer style="background-color: #6f6e6e;">
+        <div class="footer-container">
+            <div class="social-media">
+                <h2>Shape of you</h2>
+                <p>Find us on our social media platforms</p>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="working-hours">
+                <h2>Working Hours</h2> <br />
+                <p>Working days / 08:00 - 20:00</p>
+                <p>Saturday / 08:00 - 20:00</p>
+                <p>Sunday / CLOSED</p>
+
+                <!--Buttons-->
+                <div class="info-button">
+                    <form action="#">
+                        <input class="call" type="submit" value="Call Us" />
+                    </form>
+
+                    <form action="#">
+                        <input class="mail" type="submit" value="Email Us" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="location">
+                <a href="#"><i class="fa-solid fa-location-dot"></i></a> <br /><br />
+                <p>Al Dhait, Ras Al Khaimah</p>
+                <p>United Arab Emirates</p>
+            </div>
+        </div>
+        <hr class="cr-hr" />
+        <p style="padding:20px 0" class="copyright">Copyright <i class="fa-regular fa-copyright"></i> 2023</p>
+
+    </footer>
+
+
+    <!--linking javascript-->
+    <script src="script.js"></script>
+</body>
+</html>
