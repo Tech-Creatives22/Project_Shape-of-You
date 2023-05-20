@@ -1,0 +1,525 @@
+//setting variables
+$teal-color: #307d7a;
+$main-font: 'Georgia pro', serif;
+
+//USE OF MIXINS
+
+// This mixin sets styles for tablets
+@mixin tablet {
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+// This mixin sets styles for phones
+@mixin phone {
+    @media screen and (max-width: 479px) {
+        @content;
+    }
+}
+
+//Main font styling
+@mixin main_font ($font, $style, $color, $font-size) {
+    font-family: $font;
+    font-style: $style;
+    color: $color;
+    font-size: $font-size
+}
+
+//image background 
+@mixin background($background, $repeat, $size) {
+    background-image: $background;
+    background-repeat: $repeat;
+    background-size: $size;
+}
+
+//align
+@mixin align($text_align){
+    justify-content: center;
+    text-align: $text_align;
+    align-items: center
+}
+
+//general styling
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('images/background.png');
+}
+
+//header
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 8px;
+    background-color: #eff5f4;
+    color: #307D7A;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    transition: all .4s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+}
+
+.logo_img {
+    width: 85px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1.2px solid red;
+}
+
+.logo_text {
+    color: #000000;
+    font-family: 'IM Fell French Canon', serif;
+    font-size: 25px;
+}
+
+#logo_text2 {
+    font-size: 18px;
+}
+
+#navigation-bar {
+    display: flex;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    list-style: none;
+    align-items: center;
+    margin-right: 22px;
+}
+
+ul li {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+ul li a {
+    color: #307D7A;
+    padding: 12px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+ul li a:hover {
+    background-color: #307D7A;
+    color: #fff;
+}
+
+#bar {
+    display: none;
+    z-index: 20;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    header {
+        padding: 14px 0;
+        transition: .2s;
+    }
+
+    ul li a {
+        font-size: 18px;
+    }
+
+    .logo_img {
+        width: 75px;
+        height: 70px;
+        margin-right: 14px;
+    }
+
+    .logo_text {
+        font-size: 18px;
+    }
+
+    #logo_text2 {
+        font-size: 14.5px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    #bar {
+        display: block;
+    }
+
+    #navigation-bar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 280px;
+        height: 50vh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: all .4s ease;
+        background-color: #307D7A;
+    }
+
+    ul li a {
+        color: white;
+        display: block;
+        margin: 8px 0;
+        padding: 10px 20px;
+        transition: all .4s ease;
+    }
+
+    ul li a:hover {
+        background-color: transparent;
+        color: #ffffff;
+        transform: translateX(3.4px);
+    }
+
+    #navigation-bar.show {
+        right: 2%;
+    }
+}
+
+//Main contact heading
+.main_head {
+    //adding the gradient color background
+    background-image: linear-gradient(180deg, rgba(64,182,178,0.241421568627451) 0%, rgba(255,255,255,0) 100%);
+    //including a mixin to style the font
+    @include main_font($main-font, italic, $teal-color, 5vw);
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 50px;
+
+    //setting font style in tablet and phone version
+    @include tablet {
+        font-size: 10vw;
+    }
+
+    @include phone {
+        font-size: 15vw;
+    }
+}
+
+//About info section
+.about_info {
+    width: 100%;
+    padding: 2vw;
+    display: flex;
+    flex-direction: row;
+    //including a mixin that align the content and text to left
+    @include align(left);
+    //including a mixin that styles the font
+    @include main_font($main-font,italic,white,1.4vw);
+    //inserting a background image and adding a gradient teal colored layer over it 
+    @include background((linear-gradient(180deg, rgba(48,125,122,0.6475840336134453) 0%, rgba(48,125,122,0.6503851540616247) 100%), url('images/bg.png')), no-repeat, cover);
+
+    //styling div inside about info class
+    > div {
+        margin: 20px;
+        width: 45%;
+
+        //setting image width inside the div in info class
+        img {
+            max-width: 100%;
+        }
+    }
+
+    //setting the flex direction to column in tablet and phone version so that the image appears under the text
+    @include tablet {
+        flex-direction: column;
+
+        > div {
+            width: 80%;
+        }
+
+        .about_text {
+            font-size: 2.2vw;
+        }
+    }
+
+    @include phone {
+        flex-direction: column;
+
+        > div {
+            width: 80%;
+        }
+
+        .about_text {
+            font-size: 3.2vw;
+        }
+    }
+}
+
+/*Hr section*/
+.hr-section {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    @include main_font($main-font, italic, $teal-color, 1.3rem);
+    margin: 45px 100px;
+}
+
+.hr-section:before,
+.hr-section:after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(48, 125, 122, .56);
+    height: 2.4px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 8px;
+}
+
+//Review Section
+.rev_outer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    //including align mixin and aligning the text to center
+    @include align(center);
+    //styling individual review column
+    .rev_single {
+        width: 20%;
+        margin: 0.5%;
+        background: #fff;
+        padding: 2%;
+        height: 50%;
+
+        @include tablet {
+            width: 30%;
+            margin: 2%;
+        }
+
+        @include phone {
+            width: 80%;
+            margin: 2%;
+        }
+
+        img {
+            width: 25%;
+            height: 20%;
+            border-radius: 50%;
+        }
+
+        .name {
+            font-size: 1.2vw;
+            text-transform: uppercase;
+            margin: 20px 0;
+
+            @include tablet {
+                font-size: 2.2vw;
+            }
+
+            @include phone {
+                font-size: 3.2vw;
+            }
+        }
+
+        .rate {
+            color: #6ab04c;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 0.9vw;
+
+            @include tablet {
+                font-size: 1.2vw;
+            }
+
+            @include phone {
+                font-size: 2.2vw;
+            }
+        }
+    }
+    //using hide class to hide some reviews in tablet and phone versions
+    .hide {
+        display: block;
+
+        @include tablet {
+            display: none;
+        }
+
+        @include phone {
+            display: none;
+        }
+    }
+}
+
+//view more button div styling
+.View_more {
+    //including the mixin align to align the content to center
+    @include align(center);
+    margin-top: 20px;
+
+    //View more button style
+    .btn {
+        //styling the button
+        padding: 5px 20px 5px 20px;
+        background-color: transparent;
+        border: 2px solid $teal-color;
+        border-radius: 5px;
+        display: inline;
+
+        a {
+            color: white;
+        }
+    }
+
+    .btn:hover, .btn:focus {
+        color: #000000;
+        outline: 0;
+
+        a {
+            color: black;
+        }
+    }
+    //adding hovering effect on the button
+    .effect {
+        border-color: $teal-color;
+        color: #ffffff;
+        box-shadow: 0 0 40px 40px $teal-color inset, 0 0 0 0 $teal-color;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+    }
+
+    .effect:hover {
+        box-shadow: 0 0 10px 0 $teal-color inset, 0 0 10px 4px $teal-color;
+    }
+}
+
+//location and timing section
+.location {
+    //including the mixin main_font to style the font
+    @include main_font($main-font, italic, white, 1.5vw);
+
+    p {
+        margin: 5% 10% 5% 20%;
+    }
+
+    @include tablet {
+        font-size: 2.5vw;
+        text-align: center;
+
+        p {
+            margin: 0 0 2% 0;
+        }
+    }
+
+    @include phone {
+        font-size: 3.5vw;
+        text-align: center;
+
+        p {
+            margin: 0 0 2% 0;
+        }
+    }
+}
+
+//map
+.map {
+    width: 45vw;
+    height: 18vw;
+    border: 2px solid #307D7A;
+    border-radius: 20px;
+
+    @include tablet {
+        width: 100%;
+        height: 25vw;
+    }
+
+    @include phone {
+        width: 100%;
+        height: 25vw;
+    }
+}
+
+//Experts section
+.experts {
+    width: 100%;
+    //including the mixin align to align the content to center
+    @include align(center);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+        width: 80%;
+        margin: auto;
+    }
+
+    @include phone {
+        width: 80%;
+        margin: auto;
+    }
+
+    //the following class is used to style individual expert column
+    .expert_single {
+        width: 13%;
+        box-sizing: border-box;
+        margin: 0.5vw;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 15px;
+
+        @include tablet {
+            width: 25%;
+            margin: 2%;
+        }
+
+        @include phone {
+            width: 40%;
+            margin: 2%;
+        }
+
+        img {
+            border-radius: 15px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            //including the mixin main_font to style the font
+            @include main_font($main-font, italic, $teal-color, 2vw);
+
+            @include tablet {
+                font-size: 3.5vw;
+            }
+
+            @include phone {
+                font-size: 5vw;
+            }
+        }
+
+        p {
+            font-size: 18px;
+
+            @include tablet {
+                font-size: 16px;
+            }
+
+            @include phone {
+                font-size: 14px;
+            }
+        }
+
+        //the following class is used to style the container that include the contact icons(watsapp and email)
+        .contact_icons {
+            display: flex;
+            flex-direction: row;
+            font-size: 30px;
+            justify-content: center;
+            color: #307d7a;
+
+            > div {
+                margin: 6px;
+            }
+        }
+    }
+}
