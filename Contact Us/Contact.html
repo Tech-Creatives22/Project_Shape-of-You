@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="Contact.css" />
+    <link rel="icon" href="images/SOY favicon.png" type="image/x-icon" /> <!--gonna change the icon later-->
+    <!--External stylesheets-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a049c3ac9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--attaching java script from emailjs.com where we created our email format template-->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            //added the public key from the account created in emailjs
+            emailjs.init("aQ0fnZG3ginAOX30Y");
+        })();
+    </script>
+
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <img class="logo_img" src="images/logo.png" alt="icon image" />
+            <a href="home.html" class="logo_text"><i>Shape of You <br /><span id="logo_text2">ladies Beauty</span></i></a>
+        </div>
+
+        <ul id="navigation-bar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+
+        <!--menu bar-->
+        <i class="fa-solid fa-bars" id="bar"></i>
+    </header>
+
+    <!--the following class "contact" styles the div containing the text contact us and text under it-->
+    <div class="contact">
+        <!--the following class "contact_text1" sets the font size of the following text-->
+        <p class="contact_text1">Contact Us</p>
+        <!--the following class "contact_text2" sets the font size of the following text-->
+        <p class="contact_text2">
+            You may call/message us on +971 50 414 0262<br />
+            or fill out the form below for more enquiry
+        </p>
+    </div>
+    
+     <!--the following class "container" sets a background image-->
+    <div class="container">
+        <!--the following class "contact-form" styles the form-->
+        <form id="contact-form">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Email id" required />
+            <input type="text" id="phone" placeholder="Phone no." required />
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button class="btn effect" type="submit"> Send </button>
+        </form>
+
+    </div>
+
+    <!--attaching external java script-->
+    <script src="Contact.js"></script>
+</body>
+</html>
