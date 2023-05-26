@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body onload="show()">
+<body>
     <!--Moving text-->
     <marquee direction="right" behavior="alternate">
         <!--adding a moving message of open appointments-->
@@ -123,44 +123,45 @@
     <!--Brands-->
     <div class="hr-section">Brands</div>
 
-    <div class="brands-container">
+    <!--brands slider-->
+    <div class="brands_main">
+        <div class="brands_arrow brands_arrow-left"><i class="fa-solid fa-caret-left"></i></div>
+        <div class="brands_arrow brands_arrow-right"><i class="fa-solid fa-caret-right"></i></div>
 
-        <!--Slider arrow - left-->
-        <div id="left-arrow" onclick="moveLeft()">
-            <button type="button"><i class="fa-solid fa-caret-left"></i></button>
-        </div>
+        <div class="brands_container">
+            <!--calling class "container" from css that forms a container for the slides-->
+            <div class="brands_slides">
 
-        <!--Brand images-->
-        <div class="brands" id="b-id1">
-            <img src="images/Dior.jpg" alt="Brand 1 - Dior" />
-        </div>
-        <div class="brands" id="b-id2">
-            <img src="images/Mac.jpg" alt="Brand 2 - Mac" />
-        </div>
-        <div class="brands" id="b-id3">
-            <img src="images/Loreal.png" alt="Brand 3 - Loreal" />
-        </div>
-        <div class="brands" id="b-id4">
-            <img src="images/Garnier.jpg" alt="Brand 4 - Garnier" />
-        </div>
-        <div class="brands" id="b-id5">
-            <img src="images/Sephora.jpg" alt="Brand 5 - Sephora" />
-        </div>
-        <div class="brands" id="b-id6">
-            <img src="images/Nars.jpg" alt="Brand 6 - Nars" />
-        </div>
-        <div class="brands" id="b-id7">
-            <img src="images/Maybelline.png" alt="Brand 7 - Maybelline" />
-        </div>
-        <div class="brands" id="b-id8">
-            <img src="images/Chanel.jpg" alt="Brand 8 - Chanel" />
-        </div>
-
-        <!--Slider arrow - right-->
-        <div id="right-arrow" onclick="moveRight()">
-            <button type="button"><i class="fa-solid fa-caret-right"></i></button>
+                <!--this class will style (position, display...) of all the slides in the container-->
+                <div class="brands_slide">
+                    <!--This class will style individual slides (border-radius, background etc)-->
+                    <img class="brands_img" src="images/Dior.jpg" alt="Dior" /> <!--adding the image-->
+                </div>
+                <div class="brands_slide">
+                    <img class="brands_img" src="images/Mac.jpg" alt="Mac" />
+                </div>
+                <div class="brands_slide">
+                    <img class="brands_img" src="images/Loreal.png" alt="Loreal" />
+                </div>
+                <div class="brands_slide">
+                    <img class="brands_img" src="images/Garnier.jpg" alt="Garnier" />
+                </div>
+                <div class="brands_slide">
+                    <img class="brands_img" src="images/Sephora.jpg" alt="Sephora" />
+                </div>
+                <div class="brands_slide">
+                    <img class="brands_img" src="images/Nars.jpg" alt="Nars" />
+                </div>
+                <div class="brands_slide">
+                    <img class="brands_img" src="images/Maybelline.png" alt="Maybelline" />
+                </div>
+                <div class="brands_slide">
+                    <img class="brands_img" src="images/Chanel.jpg" alt="Chanel" />
+                </div>
+            </div>
         </div>
     </div>
+
 
     <!--Gallery-->
     <div class="hr-section">Gallery</div>
