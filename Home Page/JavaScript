@@ -7,42 +7,61 @@ menuBar.onclick = () => {
     navBar.classList.toggle('show');
 }
 
-//Slider
-var left = 2;
-var right = 7;
+//Slider for the brands section
+const container = document.querySelector(".brands_main");
+const slides = document.querySelector(".brands_slides");
 
-function show() {
-    for (i = left; i <= right; i++) {
-        document.getElementById("b-id" + i).style.display = "inline-block";
+// Keep track of user's mouse down and up
+let isPressedDown = false;
+// X horizontal space of cursor from inner container
+let cursorXSpace;
+
+container.addEventListener("mousedown", (e) => {
+    isPressedDown = true;
+    cursorXSpace = e.offsetX - slides.offsetLeft;
+    container.style.cursor = "grabbing";
+});
+
+container.addEventListener("mouseup", () => {
+    container.style.cursor = "grab";
+});
+
+window.addEventListener("mouseup", () => {
+    isPressedDown = false;
+});
+
+container.addEventListener("mousemove", (e) => {
+    if (!isPressedDown) return;
+    e.preventDefault();
+    slides.style.left = `${e.offsetX - cursorXSpace}px`;
+    boundSlides();
+});
+
+function boundSlides() {
+    const containerRect = container.getBoundingClientRect();
+    const slidesRect = slides.getBoundingClientRect();
+
+    if (parseInt(slides.style.left) > 0) {
+        slides.style.left = 0;
+    } else if (slidesRect.right < containerRect.right) {
+        slides.style.left = `-${slidesRect.width - containerRect.width}px`;
     }
 }
 
-function moveLeft() {
-    if (left <= 3 && right <= 7) {
-        document.getElementById("b-id" + left).style.display = "none";
-        left += 1;
-        right += 1;
+// Arrows
 
-        for (i = left; i <= right; i++) {
-            document.getElementById("b-id" + i).style.display = "inline-block";
-        }
-    }
+const arrowLeft = document.querySelector(".brands_arrow-left");
+const arrowRight = document.querySelector(".brands_arrow-right");
 
-    else
-        return;
+arrowLeft.addEventListener("click", slideLeft);
+arrowRight.addEventListener("click", slideRight);
+
+function slideLeft() {
+    slides.style.left = `${parseInt(slides.style.left) + 210}px`;
+    boundSlides();
 }
 
-function moveRight() {
-    if (left >= 2 && right >= 6) {
-        document.getElementById("b-id" + right).style.display = "none";
-        left -= 1;
-        right -= 1;
-
-        for (i = left; i <= right; i++) {
-            document.getElementById("b-id" + i).style.display = "inline-block";
-        }
-    }
-
-    else
-        return;
+function slideRight() {
+    slides.style.left = `${parseInt(slides.style.left) - 210}px`;
+    boundSlides();
 }
