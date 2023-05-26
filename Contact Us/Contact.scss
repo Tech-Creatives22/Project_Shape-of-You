@@ -47,6 +47,7 @@ header {
     transition: all .4s ease;
 }
 
+
 .logo {
     display: flex;
     align-items: center;
@@ -209,10 +210,11 @@ ul li a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    margin: 20px 0 20px 0;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     padding: 30px;
+
     //styling the form
     form {
         background: #fff;
@@ -266,4 +268,197 @@ ul li a:hover {
             box-shadow: 0 0 10px 0 $teal-color inset, 0 0 10px 4px $teal-color;
         }
     }
+}
+
+/*Footer*/
+.footer-container {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    height: 250px;
+    color: #e0e0e0;
+    justify-content: center;
+
+    @include tablet {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include phone {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    > div {
+        width: 350px;
+        margin: 0 2vw;
+
+        @include tablet {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        @include phone {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+    /*Footer - 1st div*/
+    .social-media {
+        text-align: center;
+
+        @include tablet {
+            padding: 15px;
+        }
+
+        @include phone {
+            padding: 15px;
+        }
+
+        > i {
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+            border-radius: 50px;
+            padding: 6px;
+            margin-top: 10px;
+            margin-right: 13px;
+        }
+
+        > h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 35px;
+            text-transform: uppercase;
+            text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.50);
+            margin-bottom: 8px;
+        }
+
+        > p {
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+        }
+    }
+    /*Footer - 2nd div*/
+    .working-hours {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+
+        @include tablet {
+            padding: 15px;
+            text-align: center;
+        }
+
+        @include phone {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .timing {
+            width: 300px;
+            margin-left: 4vw;
+
+            @include tablet {
+                width: 100%;
+                margin: auto;
+            }
+
+            @include phone {
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        > h2 {
+            font-size: 22px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        > p {
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+
+        .mail {
+            margin-left: 20px;
+        }
+
+        form > .call, .mail {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            outline: none;
+            border-radius: 6px;
+            padding: 6px 30px;
+            cursor: pointer;
+            font-family: 'IM Fell French Canon', serif;
+            font-style: italic;
+            font-size: 15px;
+            transition: all .4s ease;
+        }
+
+        .call:hover, .mail:hover {
+            transform: translateX(5px);
+        }
+
+        .info {
+            @include phone {
+                padding: 15px;
+                text-align: center;
+            }
+        }
+
+        .info-button {
+            display: flex;
+            margin-top: 21px;
+
+            @include tablet {
+                justify-content: center;
+                align-items: center;
+            }
+
+            @include phone {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    /*Footer - 3rd div*/
+    .location {
+        text-align: center;
+    }
+
+    .location > a > i {
+        color: #fff;
+        font-size: 50px;
+    }
+
+    .location > p {
+        font-family: 'Inter', sans-serif;
+        line-height: 25px;
+        font-size: 20px;
+    }
+}
+
+/*Copyright text*/
+.cr-hr {
+    margin: auto;
+    width: 85%;
+    text-align: center;
+    background-color: #e0e0e0;
+    height: 2px;
+}
+
+.copyright {
+    background-color: #4B4B4B;
+    color: #e0e0e0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
