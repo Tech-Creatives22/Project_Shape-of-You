@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Inter&family=Montserrat:wght@200&display=swap');
+
 
 //setting variables
 $teal-color: #307d7a;
@@ -272,176 +274,111 @@ ul li a:hover {
 
 /*Footer*/
 .footer-container {
-    width: 100%;
+    justify-content: space-between;
     align-items: center;
     display: flex;
     height: 250px;
     color: #e0e0e0;
-    justify-content: center;
+}
 
-    @include tablet {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
+.footer-container > div {
+    margin-left: 8%;
+    margin-right: 9%;
+}
 
-    @include phone {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
+/*Footer - 1st div*/
+.social-media {
+    text-align: center;
+}
 
-    > div {
-        width: 350px;
-        margin: 0 2vw;
+.social-media-icons {
+    margin-top: 15px;
+}
 
-        @include tablet {
-            width: 100%;
-            margin-right: 0;
-        }
+.social-media-icons > a {
+    color: #e0e0e0;
+    font-size: 15px;
+    font-style: normal;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    border-radius: 100px;
+    padding: 5px;
+}
 
-        @include phone {
-            width: 100%;
-            margin-right: 0;
-        }
-    }
-    /*Footer - 1st div*/
-    .social-media {
-        text-align: center;
+.social-media > h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.50);
+    margin-bottom: 8px;
+}
 
-        @include tablet {
-            padding: 15px;
-        }
+.social-media > p {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
 
-        @include phone {
-            padding: 15px;
-        }
+/*Footer - 2nd div*/
+.working-hours {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
 
-        > i {
-            cursor: pointer;
-            border: 1px solid #e0e0e0;
-            border-radius: 50px;
-            padding: 6px;
-            margin-top: 10px;
-            margin-right: 13px;
-        }
+.working-hours > h2 {
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
 
-        > h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-style: italic;
-            font-size: 35px;
-            text-transform: uppercase;
-            text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.50);
-            margin-bottom: 8px;
-        }
+.working-hours > p {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
 
-        > p {
-            font-family: 'Inter', sans-serif;
-            font-style: italic;
-        }
-    }
-    /*Footer - 2nd div*/
-    .working-hours {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 600;
+.mail {
+    margin-left: 2px;
+}
 
-        @include tablet {
-            padding: 15px;
-            text-align: center;
-        }
 
-        @include phone {
-            padding: 15px;
-            text-align: center;
-        }
+.form > .call, .mail {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 14px;
+    transition: all .4s ease;
+}
 
-        .timing {
-            width: 300px;
-            margin-left: 4vw;
+.call:hover, .mail:hover {
+    transform: translateX(5px);
+}
 
-            @include tablet {
-                width: 100%;
-                margin: auto;
-            }
+.info-button {
+    display: flex;
+    margin-top: 21px;
+}
 
-            @include phone {
-                width: 100%;
-                margin: auto;
-            }
-        }
+/*Footer - 3rd div*/
+.location {
+    text-align: center;
+}
 
-        > h2 {
-            font-size: 22px;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
+.location > a > i {
+    color: #fff;
+    font-size: 50px;
+}
 
-        > p {
-            font-size: 15px;
-            line-height: 25px;
-            letter-spacing: 1px;
-        }
-
-        .mail {
-            margin-left: 20px;
-        }
-
-        form > .call, .mail {
-            background-color: transparent;
-            color: #fff;
-            border: 1px solid #fff;
-            outline: none;
-            border-radius: 6px;
-            padding: 6px 30px;
-            cursor: pointer;
-            font-family: 'IM Fell French Canon', serif;
-            font-style: italic;
-            font-size: 15px;
-            transition: all .4s ease;
-        }
-
-        .call:hover, .mail:hover {
-            transform: translateX(5px);
-        }
-
-        .info {
-            @include phone {
-                padding: 15px;
-                text-align: center;
-            }
-        }
-
-        .info-button {
-            display: flex;
-            margin-top: 21px;
-
-            @include tablet {
-                justify-content: center;
-                align-items: center;
-            }
-
-            @include phone {
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
-    /*Footer - 3rd div*/
-    .location {
-        text-align: center;
-    }
-
-    .location > a > i {
-        color: #fff;
-        font-size: 50px;
-    }
-
-    .location > p {
-        font-family: 'Inter', sans-serif;
-        line-height: 25px;
-        font-size: 20px;
-    }
+.location > p {
+    font-family: 'Inter', sans-serif;
+    line-height: 25px;
 }
 
 /*Copyright text*/
@@ -461,4 +398,60 @@ ul li a:hover {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+}
+/*Scroll-bar*/
+/*::-webkit-scrollbar {
+    width: 10%;
+}*/
+
+//media queries for footer
+@media only screen and (max-width: 1200px) {
+
+    .footer-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media {
+        padding: 15px;
+    }
+
+    .working-hours {
+        padding: 15px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .info-button {
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*Media query for mobile*/
+@media only screen and (max-width: 600px) {
+    .footer-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media {
+        padding: 15px;
+    }
+
+    .working-hours {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .info {
+        text-align: justify;
+        inline-size: 80%;
+    }
+
+    .info-button {
+        justify-content: center;
+        align-items: center;
+    }
 }
