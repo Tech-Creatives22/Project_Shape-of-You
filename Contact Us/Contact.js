@@ -1,3 +1,12 @@
+//Toggling the hamburger menu
+let navBar = document.querySelector('#navigation-bar');
+let menuBar = document.querySelector('#bar');
+
+menuBar.onclick = () => {
+    menuBar.classList.toggle('fa-solid.fa-bars');
+    navBar.classList.toggle('show');
+}
+
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Preventing the default form submission behavior
 
