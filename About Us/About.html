@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a049c3ac9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title></title>
+    <title>Shape of you - ladies beauty salon</title>
 </head>
 <body>
     <!--Header-->
@@ -55,7 +55,7 @@
 
         </div>
         <div>
-            <img src="images/bg.png" />
+            <img src="images/bg.png" alt="background image" />
         </div>
     </div>
 
@@ -204,6 +204,17 @@
         <p style="padding:20px 0" class="copyright">Copyright <i class="fa-regular fa-copyright"></i> 2023</p>
 
     </footer>
+
+    <script>
+        //Toggling the hamburger menu
+        let navBar = document.querySelector('#navigation-bar');
+        let menuBar = document.querySelector('#bar');
+
+        menuBar.onclick = () => {
+            menuBar.classList.toggle('fa-solid.fa-bars');
+            navBar.classList.toggle('show');
+        }
+    </script>
 
 </body>
 </html>
