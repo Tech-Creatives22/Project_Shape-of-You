@@ -5,12 +5,20 @@
   box-sizing: border-box;
   text-decoration: none; }
 
+/*styling the marquee tag*/
+marquee {
+  height: 22px;
+  background-color: rgba(48, 125, 122, 0.84);
+  color: #e0e0e0;
+  font-family: 'IM Fell French Canon', serif;
+  font-style: italic;
+  font-size: 18px; }
+
 body {
   background-image: url("images/background.png"); }
 
 header {
   width: 100%;
-  top: 0;
   right: 0;
   display: flex;
   padding: 8px;
@@ -18,7 +26,7 @@ header {
   color: #307D7A;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   z-index: 10;
   transition: all .4s ease; }
 
