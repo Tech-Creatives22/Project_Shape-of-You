@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Inter&family=Montserrat:wght@200&display=swap');
 
-
 //setting variables
 $teal-color: #307d7a;
+$green-rgb: rgba(48,125,122,0.840);
 $main-font: 'Georgia pro', serif;
 
 //USE OF MIXINS
@@ -51,6 +51,16 @@ $main-font: 'Georgia pro', serif;
     text-decoration: none;
 }
 
+/*styling the marquee tag*/
+marquee {
+    height: 22px;
+    background-color: $green-rgb;
+    color: #e0e0e0;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 18px;
+}
+
 body {
     background-image: url('images/background.png');
 }
@@ -58,7 +68,6 @@ body {
 //header
 header {
     width: 100%;
-    top: 0;
     right: 0;
     display: flex;
     padding: 8px;
@@ -66,7 +75,7 @@ header {
     color: #307D7A;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     transition: all .4s ease;
 }
