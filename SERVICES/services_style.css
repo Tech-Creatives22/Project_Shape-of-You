@@ -160,7 +160,8 @@ ul li {
         margin: 0 8px;
     }
 h3 {
-    color:#307D7A;
+    color: #000000;
+    font-weight: 400;
 }
 .section {
     padding: 10px 0 10px 0;
@@ -205,7 +206,7 @@ h3 {
 }
 
 .info > p{
-    color: rgba(0, 0, 0, 0.50);
+    color: rgba(0, 0, 0, 0.55);
 }
 
 /*button*/
