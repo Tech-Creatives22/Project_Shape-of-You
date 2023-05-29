@@ -340,7 +340,14 @@ form > .more:hover{
 }
 
 /*Footer*/
-.footer-container {
+footer {
+    /*background-color: #6f6e6e;*/
+    background-color: #4B4B4B;
+    bottom: 0;
+    z-index: 10000;
+}
+
+.footer-container{
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -348,13 +355,13 @@ form > .more:hover{
     color: #e0e0e0;
 }
 
-.footer-container > div {
+.footer-container > div{
     margin-left: 8%;
     margin-right: 9%;
 }
 
 /*Footer - 1st div*/
-.social-media {
+.social-media{
     text-align: center;
 }
 
@@ -362,15 +369,15 @@ form > .more:hover{
     margin-top: 15px;
 }
 
-.social-media-icons > a {
-    color: #e0e0e0;
-    font-size: 15px;
-    font-style: normal;
-    cursor: pointer;
-    border: 1px solid #e0e0e0;
-    border-radius: 100px;
-    padding: 5px;
-}
+    .social-media-icons > a {
+        color: #e0e0e0;
+        font-size: 15px;
+        font-style: normal;
+        cursor: pointer;
+        border: 1px solid #e0e0e0;
+        border-radius: 50px;
+        padding: 6px 8px;
+    }
 
 .social-media > h2 {
     font-family: 'Montserrat', sans-serif;
@@ -387,44 +394,43 @@ form > .more:hover{
 }
 
 /*Footer - 2nd div*/
-.working-hours {
+.working-hours{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
 }
 
-.working-hours > h2 {
+.working-hours > h2{
     font-size: 22px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 
-.working-hours > p {
+.working-hours > p{
     font-size: 15px;
     line-height: 25px;
     letter-spacing: 1px;
 }
 
-.mail {
-    margin-left: 2px;
+.mail{
+    margin-left: 20px;
 }
 
-
-.form > .call, .mail {
+form > .call, .mail{
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
     outline: none;
     border-radius: 6px;
-    padding: 6px 20px;
+    padding: 6px 30px;
     cursor: pointer;
     font-family: 'IM Fell French Canon', serif;
     font-style: italic;
-    font-size: 14px;
+    font-size: 15px;
     transition: all .4s ease;
 }
 
-.call:hover, .mail:hover {
+.call:hover, .mail:hover{
     transform: translateX(5px);
 }
 
@@ -434,16 +440,16 @@ form > .more:hover{
 }
 
 /*Footer - 3rd div*/
-.location {
+.location{
     text-align: center;
 }
 
-.location > a > i {
+.location > a > i{
     color: #fff;
     font-size: 50px;
 }
 
-.location > p {
+.location > p{
     font-family: 'Inter', sans-serif;
     line-height: 25px;
 }
@@ -466,8 +472,9 @@ form > .more:hover{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
-/*Scroll-bar*/
-/*::-webkit-scrollbar {
+
+/*Scroll-bar
+::-webkit-scrollbar {
     width: 10%;
 }*/
 
@@ -495,26 +502,6 @@ form > .more:hover{
         font-size: 14.5px;
     }
 }
-.footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .social-media {
-        padding: 15px;
-    }
-
-    .working-hours {
-        padding: 15px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .info-button {
-        justify-content: center;
-        align-items: center;
-    }
 
 /*Media query for mobile*/
 @media only screen and (max-width: 600px) {
@@ -688,30 +675,97 @@ form > .more:hover{
     /*-----------------------------------------*/
 
     /*footer*/
-     .footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
+    footer{
+        bottom: 0;
     }
 
-    .social-media {
-        padding: 15px;
+    .footer-container {
+        display: block;
+        height: 360px;
     }
 
+    .social-media{
+        padding-top: 20px;
+    }
+
+    .social-media > i {
+        margin-top: 10px;
+        margin-right: 2px;
+        font-size: 13px;
+    }
+
+    .social-media > h2 {
+        font-size: 16px;
+    }
+
+    .social-media > p{
+        margin-top: -2px;
+        font-size: 13px;
+    }
+
+    /*2nd div*/
     .working-hours {
-        padding: 15px;
         text-align: center;
+        padding-top: 23px;
     }
 
-    .info {
-        text-align: justify;
-        inline-size: 80%;
+    .working-hours > h2 {
+       font-size: 16px;
+       letter-spacing: 0.10em;
+    }
+
+    .working-hours > p {
+       font-size: 11px;
+       line-height: 20px;
+       letter-spacing: 1px;
+    }
+
+    #working-text{
+        margin-top: -13px;
     }
 
     .info-button {
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
+
+    .mail{
+        margin-left: 11px;
+    }
+
+    form > .call, .mail {
+        padding: 4px 18px;
+        font-size: 13px;
+    }
+
+    /*3rd div*/
+    .location{
+        padding-top: 30px;
+    }
+
+    .location > a > i {
+        font-size: 25px;
+    }
+
+    .location > p {
+        line-height: 18px;
+        font-size: 13px;
+    }
+
+    #location-text{
+        margin-top: -2px;
+    }
+
+    /*copyright*/
+    .cr-hr {
+        margin-top: 20px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
 
 /*Media query for tablets*/
 @media only screen and (min-width: 601px) and (max-width: 768px) {
@@ -782,7 +836,7 @@ form > .more:hover{
 
     /*Brands*/
     .brands_container {
-        height: 10vh;
+        height: 16vh;
     }
 
     .brands_arrow{
@@ -855,30 +909,93 @@ form > .more:hover{
     }
 
     /*Footer*/
-     .footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
+    .footer-container {
+        display: block;
+        height: 360px;
     }
 
     .social-media {
-        padding: 15px;
+        padding-top: 20px;
     }
 
+        .social-media > i {
+            margin-top: 10px;
+            margin-right: 2px;
+            font-size: 13px;
+        }
+
+        .social-media > h2 {
+            font-size: 16px;
+        }
+
+        .social-media > p {
+            margin-top: -2px;
+            font-size: 13px;
+        }
+
+    /*2nd div*/
     .working-hours {
-        padding: 15px;
         text-align: center;
+        padding-top: 23px;
     }
 
-    .info {
-        text-align: justify;
-        inline-size: 80%;
+        .working-hours > h2 {
+            font-size: 16px;
+            letter-spacing: 0.10em;
+        }
+
+        .working-hours > p {
+            font-size: 11px;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+
+    #working-text {
+        margin-top: -13px;
     }
 
     .info-button {
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
+
+    .mail {
+        margin-left: 11px;
+    }
+
+    form > .call, .mail {
+        padding: 4px 18px;
+        font-size: 13px;
+    }
+
+    /*3rd div*/
+    .location {
+        padding-top: 20px;
+    }
+
+        .location > a > i {
+            font-size: 25px;
+        }
+
+        .location > p {
+            line-height: 18px;
+            font-size: 13px;
+        }
+
+    #location-text {
+        margin-top: -2px;
+    }
+
+    /*copyright*/
+    .cr-hr {
+        margin-top: 15px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
 
 /*breakpoints to fix*/
 @media only screen and (min-width: 769px) and (max-width: 1024px){
@@ -931,28 +1048,7 @@ form > .more:hover{
     }
 
     /*footer*/
-     .footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .social-media {
-        padding: 15px;
-    }
-
-    .working-hours {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .info {
-        text-align: justify;
-        inline-size: 80%;
-    }
-
-    .info-button {
-        justify-content: center;
-        align-items: center;
+    footer{
+        font-size: 12px;
     }
 }
