@@ -2,22 +2,31 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
-    text-align: center;
     justify-content: center;
-    background-image: url('images/bg.png');
+    background-image: url('images/Website background.png');
+    min-height: 100vh;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;   
 }
 
+/*styling the marquee tag*/
+marquee {
+    height: 22px;
+    background-color: rgb(48 125 122 / 0.84);
+    color: #e0e0e0;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    font-size: 18px;
+}
 
 /*header*/
 header {
     width: 100%;
-    top: 0;
+    top: 22px;
     right: 0;
     display: flex;
     padding: 8px;
@@ -25,8 +34,8 @@ header {
     color: #307D7A;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    z-index: 10;
+    position: absolute;
+    z-index: 50;
     transition: all .4s ease;
 }
 
@@ -251,7 +260,7 @@ h1 {
         background: teal;
         position: absolute;
         right: 9.33vw;
-        top: 0.8%;
+        top: 0.5%;
         z-index: -2;
     }
     #hr-section1:after {
@@ -262,7 +271,7 @@ h1 {
         background: teal;
         position: absolute;
         left: 10.10vw;
-        top: 0.8%;
+        top: 0.5%;
         z-index: -2;
     }
 
@@ -373,7 +382,14 @@ h1 {
     }
 
 /*Footer*/
-.footer-container {
+footer {
+    /*background-color: #6f6e6e;*/
+    background-color: #4B4B4B;
+    bottom: 0;
+    z-index: 10000;
+}
+
+.footer-container{
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -381,29 +397,24 @@ h1 {
     color: #e0e0e0;
 }
 
-    .footer-container > div {
-        margin-left: 8%;
-        margin-right: 9%;
-    }
+.footer-container > div{
+    margin-left: 7%;
+    margin-right: 9%;
+}
 
 /*Footer - 1st div*/
-.social-media {
+.social-media{
     text-align: center;
 }
 
-.social-media-icons {
-    margin-top: 15px;
+.social-media > i{
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 6px;
+    margin-top: 10px;
+    margin-right: 13px;
 }
-
-    .social-media-icons > a {
-        color: #e0e0e0;
-        font-size: 15px;
-        font-style: normal;
-        cursor: pointer;
-        border: 1px solid #e0e0e0;
-        border-radius: 100px;
-        padding: 5px;
-    }
 
 .social-media > h2 {
     font-family: 'Montserrat', sans-serif;
@@ -412,59 +423,55 @@ h1 {
     text-transform: uppercase;
     text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.50);
     margin-bottom: 8px;
-    width: 19vw;
+    font-weight: 400;
 }
 
 .social-media > p {
     font-family: 'Inter', sans-serif;
     font-style: italic;
-    font-size: 16px;
 }
 
 /*Footer - 2nd div*/
-.working-hours {
+.working-hours{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 600;
 }
 
-    .working-hours > h2 {
-        font-size: 22px;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        width: 17vw;
-        text-align: left;
-    }
-
-    .working-hours > p {
-        font-size: 15px;
-        line-height: 25px;
-        letter-spacing: 1px;
-        text-align: left;
-    }
-
-.mail {
-    margin-left: 2px;
+.working-hours > h2{
+    font-size: 23px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
+.working-hours > p{
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: match-parent;
+}
 
-.form > .call, .mail {
+.mail{
+    margin-left: 20px;
+}
+
+form > .call, .mail{
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
     outline: none;
     border-radius: 6px;
-    padding: 6px 20px;
+    padding: 6px 30px;
     cursor: pointer;
     font-family: 'IM Fell French Canon', serif;
     font-style: italic;
-    font-size: 14px;
+    font-size: 15px;
     transition: all .4s ease;
 }
 
-    .call:hover, .mail:hover {
-        transform: translateX(5px);
-    }
+.call:hover, .mail:hover{
+    transform: translateX(5px);
+}
 
 .info-button {
     display: flex;
@@ -472,20 +479,21 @@ h1 {
 }
 
 /*Footer - 3rd div*/
-.location {
+.location{
     text-align: center;
 }
 
-    .location > a > i {
-        color: #fff;
-        font-size: 50px;
-    }
+.location > a > i{
+    color: #fff;
+    font-size: 50px;
+}
 
-    .location > p {
-        font-family: 'Inter', sans-serif;
-        line-height: 25px;
-        width: 18vw;
-    }
+.location > p{
+    font-size: 15px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    line-height: 25px;
+}
 
 /*Copyright text*/
 .cr-hr {
@@ -687,40 +695,94 @@ h1 {
         margin-left: -0.41vw;
     }
 
-/*footer section*/
-     .footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
+     /*footer section*/
+    .footer-container {
+        display: block;
+        height: 360px;
     }
 
     .social-media {
-        padding: 15px;
-    }
-    .social-media > h2{
-        width: 36vw;
+        padding-top: 20px;
     }
 
+        .social-media > i {
+            margin-top: 10px;
+            margin-right: 2px;
+            font-size: 13px;
+        }
+
+        .social-media > h2 {
+            font-size: 16px;
+        }
+
+        .social-media > p {
+            margin-top: -2px;
+            font-size: 13px;
+        }
+
+    /*2nd div*/
     .working-hours {
-        padding: 15px;
         text-align: center;
-        margin-bottom: 10px;
+        padding-top: 23px;
     }
+
         .working-hours > h2 {
-            width: 29vw;
+            font-size: 16px;
+            letter-spacing: 0.10em;
         }
+
         .working-hours > p {
-            text-align: center;
+            font-size: 11px;
+            line-height: 20px;
+            letter-spacing: 1px;
         }
+
+    #working-text {
+        margin-top: -13px;
+    }
+
     .info-button {
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
-    .location > p {
-        width: 29vw;
+
+    .mail {
+        margin-left: 11px;
+    }
+
+    form > .call, .mail {
+        padding: 4px 18px;
+        font-size: 13px;
+    }
+
+    /*3rd div*/
+    .location {
+        padding-top: 20px;
+    }
+
+        .location > a > i {
+            font-size: 25px;
+        }
+
+        .location > p {
+            line-height: 18px;
+            font-size: 13px;
+        }
+
+    #location-text {
+        margin-top: -2px;
+    }
+
+    /*copyright*/
+    .cr-hr {
+        margin-top: 15px;
+    }
+
+    .copyright {
+        font-size: 12px;
     }
 }
-
 /*Media query for mobile*/
 @media only screen and (max-width: 600px) {
 
@@ -765,6 +827,7 @@ h1 {
     h1 {
         font-size: 58px;
     }
+
 /*image slider container*/
     .container {
         width: 83.49vw;
@@ -885,199 +948,100 @@ h1 {
     }
 
 /*footer section*/
+    footer {
+        bottom: 0;
+    }
+
     .footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
+        display: block;
+        height: 360px;
     }
 
     .social-media {
-        padding: 15px;
-    }
-    .social-media > h2{
-        font-size: 30px;
-        width: 76vw;
+        padding-top: 20px;
     }
 
-    .working-hours {
-        padding: 15px;
-    }
-        .working-hours > h2 {
-            text-align: center;
-            width: 71vw;
+        .social-media > i {
+            margin-top: 10px;
+            margin-right: 2px;
+            font-size: 13px;
         }
-        .working-hours > p {
-            text-align: center;
-        }
-
-    .info {
-        text-align: justify;
-        inline-size: 80%;
-    }
-
-    .info-button {
-        justify-content: center;
-        align-items: center;
-    }
-    .location > p {
-        width: 71vw;
-    }
-}
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    /*header*/
-    header {
-        top: 0;
-        display: inline-block;
-    }
-
-    .logo {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo_img {
-        width: 75px;
-        height: 70px;
-        border-radius: 50%;
-        border: none;
-        margin: 20px 0;
-    }
-
-    .logo_text {
-        display: none;
-    }
-
-    #navigation-bar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    ul li a {
-        font-size: 18px;
-    }
-
-        ul li a:hover {
-            background-color: transparent;
-            color: #307D7A;
-        }
-/*main heading*/
-h1 {
-        top: 70vw;
-        font-size: 58px;
-    }
-    /*footer section*/
-    .footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .social-media {
-        padding: 15px;
-    }
 
         .social-media > h2 {
-            font-size: 30px;
-            width: 76vw;
+            font-size: 16px;
         }
 
+        .social-media > p {
+            margin-top: -2px;
+            font-size: 13px;
+        }
+
+    /*2nd div*/
     .working-hours {
-        padding: 15px;
+        text-align: center;
+        padding-top: 23px;
     }
 
         .working-hours > h2 {
-            text-align: center;
-            width: 71vw;
+            font-size: 16px;
+            letter-spacing: 0.10em;
         }
 
         .working-hours > p {
-            text-align: center;
+            font-size: 11px;
+            line-height: 20px;
+            letter-spacing: 1px;
         }
 
-    .info {
-        text-align: justify;
-        inline-size: 80%;
+    #working-text {
+        margin-top: -13px;
     }
 
     .info-button {
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
 
-    .location > p {
-        width: 71vw;
+    .mail {
+        margin-left: 11px;
+    }
+
+    form > .call, .mail {
+        padding: 4px 18px;
+        font-size: 13px;
+    }
+
+    /*3rd div*/
+    .location {
+        padding-top: 30px;
+    }
+
+        .location > a > i {
+            font-size: 25px;
+        }
+
+        .location > p {
+            line-height: 18px;
+            font-size: 13px;
+        }
+
+    #location-text {
+        margin-top: -2px;
+    }
+
+    /*copyright*/
+    .cr-hr {
+        margin-top: 20px;
+    }
+
+    .copyright {
+        font-size: 12px;
     }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /*header*/
-    header {
-        padding: 14px 0;
-    }
-
-    ul li a {
-        font-size: 16px;
-        padding: 0;
-    }
-
-    .logo_img {
-        width: 75px;
-        height: 70px;
-        margin-right: 14px;
-    }
-
-    .logo_text {
-        font-size: 18px;
-    }
-
-    #logo_text2 {
-        font-size: 14.5px;
-    }
-    /*main heading*/
-h1 {
-        top: 70vw;
-        font-size: 58px;
-    }
+@media only screen and (max-width: 1024px) {
     /*footer section*/
-    .footer-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .social-media {
-        padding: 15px;
-    }
-
-        .social-media > h2 {
-            font-size: 30px;
-            width: 76vw;
-        }
-
-    .working-hours {
-        padding: 15px;
-    }
-
-        .working-hours > h2 {
-            text-align: center;
-            width: 71vw;
-        }
-
-        .working-hours > p {
-            text-align: center;
-        }
-
-    .info {
-        text-align: justify;
-        inline-size: 80%;
-    }
-
-    .info-button {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .location > p {
-        width: 71vw;
+    footer {
+        font-size: 12px;
     }
 }
