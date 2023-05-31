@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Inter&family=Montserrat:wght@200&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +10,7 @@
 body {
     min-height: 100vh;
     justify-content: center;
+    overflow-x: hidden;
     background-image: url('images/Website background.png');
 }
 
@@ -38,13 +39,13 @@ header {
     transition: all .4s ease;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     padding-left: 3%;
 }
 
-.logo_img{
+.logo_img {
     width: 85px;
     height: 80px;
     border-radius: 50%;
@@ -58,7 +59,7 @@ header {
     font-size: 25px;
 }
 
-#logo_text2{
+#logo_text2 {
     font-size: 18px;
 }
 
@@ -76,20 +77,20 @@ ul li {
     font-size: 20px;
 }
 
-ul li a{
-    color: #307D7A;
-    padding: 12px;
-    border-radius: 5px;
-    transition: all 0.5s ease;
-}
-
-    ul li a:hover {
-        background-color: #307D7A;
-        color: #fff;
+    ul li a {
+        color: #307D7A;
+        padding: 12px;
+        border-radius: 5px;
+        transition: all 0.5s ease;
     }
 
+        ul li a:hover {
+            background-color: #307D7A;
+            color: #fff;
+        }
 
-#bar{
+
+#bar {
     display: none;
     z-index: 30;
     font-size: 28px;
@@ -105,7 +106,7 @@ ul li a{
     min-height: 720px;
 }
 
-#cosmetics-text{
+#cosmetics-text {
     color: #307D7A;
     font-family: 'IM Fell French Canon', serif;
     font-style: italic;
@@ -114,7 +115,7 @@ ul li a{
     margin-left: 62.2%;
 }
 
-.book{
+.book {
     width: 290px;
     padding: 10px;
     border: 0;
@@ -131,18 +132,18 @@ ul li a{
     transition: all .4s ease;
 }
 
-#arrow{
+#arrow {
     padding-left: 5px;
     font-size: 17px;
 }
 
-.book:hover{
+.book:hover {
     background: rgba(48, 125, 122, .60);
     transform: translateX(8px);
 }
 
 /*Hr section*/
-.hr-section{
+.hr-section {
     display: flex;
     flex-basis: 100%;
     align-items: center;
@@ -153,16 +154,16 @@ ul li a{
     margin: 45px 100px;
 }
 
-.hr-section:before,
-.hr-section:after{
-    content: "";
-    flex-grow: 1;
-    background: rgba(48, 125, 122, .56);
-    height: 2.4px;
-    font-size: 0;
-    line-height: 0;
-    margin: 0 8px;
-}
+    .hr-section:before,
+    .hr-section:after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(48, 125, 122, .56);
+        height: 2.4px;
+        font-size: 0;
+        line-height: 0;
+        margin: 0 8px;
+    }
 
 /*paragraph*/
 .texts {
@@ -269,8 +270,7 @@ ul li a{
 .brands_arrow {
     position: absolute;
     transform: translateY(130%);
-    width: 1.975vw;
-    height: 1.975vw;
+    width: 2rem;
     background-color: transparent;
     color: #307D7A;
     font-size: 1.317vw;
@@ -304,22 +304,22 @@ ul li a{
     grid-auto-flow: dense;
 }
 
-.vertical{
+.vertical {
     grid-row: span 2;
 }
 
-.horizontal{
+.horizontal {
     grid-column: span 2;
 }
 
-.gallery-container > div > img{
+.gallery-container > div > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /*Gallery Button*/
-form > .more{
+form > .more {
     width: 140px;
     padding: 8px;
     border: 0;
@@ -335,10 +335,10 @@ form > .more{
     transition: all .4s ease;
 }
 
-form > .more:hover{
-    background: rgba(48, 125, 122, .60);
-    transform: translateX(8px);
-}
+    form > .more:hover {
+        background: rgba(48, 125, 122, .60);
+        transform: translateX(8px);
+    }
 
 /*Footer*/
 footer {
@@ -348,7 +348,7 @@ footer {
     z-index: 10000;
 }
 
-.footer-container{
+.footer-container {
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -356,13 +356,13 @@ footer {
     color: #e0e0e0;
 }
 
-.footer-container > div{
-    margin-left: 8%;
-    margin-right: 9%;
-}
+    .footer-container > div {
+        margin-left: 8%;
+        margin-right: 9%;
+    }
 
 /*Footer - 1st div*/
-.social-media{
+.social-media {
     text-align: center;
 }
 
@@ -395,29 +395,29 @@ footer {
 }
 
 /*Footer - 2nd div*/
-.working-hours{
+.working-hours {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
 }
 
-.working-hours > h2{
-    font-size: 22px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-}
+    .working-hours > h2 {
+        font-size: 22px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
 
-.working-hours > p{
-    font-size: 15px;
-    line-height: 25px;
-    letter-spacing: 1px;
-}
+    .working-hours > p {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
 
-.mail{
+.mail {
     margin-left: 20px;
 }
 
-form > .call, .mail{
+form > .call, .mail {
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
@@ -431,9 +431,9 @@ form > .call, .mail{
     transition: all .4s ease;
 }
 
-.call:hover, .mail:hover{
-    transform: translateX(5px);
-}
+    .call:hover, .mail:hover {
+        transform: translateX(5px);
+    }
 
 .info-button {
     display: flex;
@@ -441,19 +441,19 @@ form > .call, .mail{
 }
 
 /*Footer - 3rd div*/
-.location{
+.location {
     text-align: center;
 }
 
-.location > a > i{
-    color: #fff;
-    font-size: 50px;
-}
+    .location > a > i {
+        color: #fff;
+        font-size: 50px;
+    }
 
-.location > p{
-    font-family: 'Inter', sans-serif;
-    line-height: 25px;
-}
+    .location > p {
+        font-family: 'Inter', sans-serif;
+        line-height: 25px;
+    }
 
 /*Copyright text*/
 .cr-hr {
@@ -479,13 +479,17 @@ form > .call, .mail{
     width: 10%;
 }*/
 
-@media only screen and (max-width: 1200px){
-    header{
+@media only screen and (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
         padding: 14px 0;
         transition: .2s;
     }
 
-    ul li a{
+    ul li a {
         font-size: 18px;
     }
 
@@ -506,6 +510,10 @@ form > .call, .mail{
 
 /*Media query for mobile*/
 @media only screen and (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
 
     /*header*/
     #bar {
@@ -547,7 +555,7 @@ form > .call, .mail{
     /*gallery*/
     .gallery-container {
         padding: 8px;
-        max-width: 500px;
+        max-width: 300px;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
         grid-auto-rows: 125px;
@@ -651,7 +659,7 @@ form > .call, .mail{
     /*-----------------------------------------*/
     /*Brands*/
 
-    .brands_container{
+    .brands_container {
         height: 16vh;
     }
 
@@ -670,13 +678,15 @@ form > .call, .mail{
         width: 20vw;
     }
 
-    .brands_arrow{
+    .brands_arrow {
         margin: 7% 9%;
+        width: 1rem;
+        font-size: 13px;
     }
     /*-----------------------------------------*/
 
     /*footer*/
-    footer{
+    footer {
         bottom: 0;
     }
 
@@ -685,24 +695,24 @@ form > .call, .mail{
         height: 360px;
     }
 
-    .social-media{
+    .social-media {
         padding-top: 20px;
     }
 
-    .social-media > i {
-        margin-top: 10px;
-        margin-right: 2px;
-        font-size: 13px;
-    }
+        .social-media > i {
+            margin-top: 10px;
+            margin-right: 2px;
+            font-size: 13px;
+        }
 
-    .social-media > h2 {
-        font-size: 16px;
-    }
+        .social-media > h2 {
+            font-size: 16px;
+        }
 
-    .social-media > p{
-        margin-top: -2px;
-        font-size: 13px;
-    }
+        .social-media > p {
+            margin-top: -2px;
+            font-size: 13px;
+        }
 
     /*2nd div*/
     .working-hours {
@@ -710,18 +720,18 @@ form > .call, .mail{
         padding-top: 23px;
     }
 
-    .working-hours > h2 {
-       font-size: 16px;
-       letter-spacing: 0.10em;
-    }
+        .working-hours > h2 {
+            font-size: 16px;
+            letter-spacing: 0.10em;
+        }
 
-    .working-hours > p {
-       font-size: 11px;
-       line-height: 20px;
-       letter-spacing: 1px;
-    }
+        .working-hours > p {
+            font-size: 11px;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
 
-    #working-text{
+    #working-text {
         margin-top: -13px;
     }
 
@@ -731,7 +741,7 @@ form > .call, .mail{
         margin-top: 10px;
     }
 
-    .mail{
+    .mail {
         margin-left: 11px;
     }
 
@@ -741,20 +751,20 @@ form > .call, .mail{
     }
 
     /*3rd div*/
-    .location{
+    .location {
         padding-top: 30px;
     }
 
-    .location > a > i {
-        font-size: 25px;
-    }
+        .location > a > i {
+            font-size: 25px;
+        }
 
-    .location > p {
-        line-height: 18px;
-        font-size: 13px;
-    }
+        .location > p {
+            line-height: 18px;
+            font-size: 13px;
+        }
 
-    #location-text{
+    #location-text {
         margin-top: -2px;
     }
 
@@ -771,9 +781,12 @@ form > .call, .mail{
 /*Media query for tablets*/
 @media only screen and (min-width: 601px) and (max-width: 768px) {
 
+    body{
+        overflow-x: hidden;
+    }
+
     /*header*/
     header {
-        top: 0;
         display: inline-block;
     }
 
@@ -840,9 +853,13 @@ form > .call, .mail{
         height: 16vh;
     }
 
-    .brands_arrow{
+    .brands_arrow {
         justify-content: center;
         align-items: center;
+        text-align: center;
+        width: 1.4rem;
+        
+        font-size: 15px;
     }
 
     .brands_img { /*setting the width and height of the image element*/
@@ -999,7 +1016,11 @@ form > .call, .mail{
 }
 
 /*breakpoints to fix*/
-@media only screen and (min-width: 769px) and (max-width: 1024px){
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
     header {
         padding: 14px 0;
     }
@@ -1024,8 +1045,13 @@ form > .call, .mail{
     }
 
     /*Brands*/
-    .brands_container{
+    .brands_container {
         height: 18vh;
+    }
+
+    .brands_arrow{
+        width: 1.4rem;
+        font-size: 15px;
     }
 
     /*cosmetics*/
@@ -1049,7 +1075,7 @@ form > .call, .mail{
     }
 
     /*footer*/
-    footer{
+    footer {
         font-size: 12px;
     }
 }
