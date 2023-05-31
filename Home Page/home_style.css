@@ -1076,6 +1076,7 @@ form > .call, .mail {
 
     /*footer*/
     footer {
-        font-size: 12px;
+        font-size: 14px;
+        bottom: 0;
     }
 }
